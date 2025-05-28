@@ -19,8 +19,8 @@ st.set_page_config(page_title="Text Summarizer", page_icon="🧠", layout="wide"
 # ✅ Load BART model and tokenizer
 @st.cache_resource
 def load_model():
-    model = BartForConditionalGeneration.from_pretrained("saved_model")
-    tokenizer = BartTokenizer.from_pretrained("saved_model")
+    model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
+    tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
     return model, tokenizer
 
 model, tokenizer = load_model()
